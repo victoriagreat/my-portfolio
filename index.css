@@ -19,7 +19,7 @@ body.dark {
 }
 
 body {
-    line-height: 1.5;
+    /* line-height: 1.5; */
     font-size: 16px;
     font-family: 'Poppins' sans-serif;
 }
@@ -54,6 +54,11 @@ ul {
 
 .main-container {
      padding-left: 130px;
+
+} 
+
+.main-part {
+    padding-left: 130px;
 }
 
 .padd-15 {
@@ -195,49 +200,6 @@ ul {
     right: 0;
 }
 
-.aside .nav-toggler {
-    height: 40px;
-    width: 45px;
-    border: 1px solid var(--bg-black-50);
-    cursor: pointer;
-    position: fixed;
-    left: 300px;
-    top: 20px;
-    border-radius: 5px;
-    background: var(--bg-black-100);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.aside .nav-toggler span {
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    display: inline-block;
-    position: relative;
-}
-
-.aside .nav-toggler span::before {
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
-    top: 6px;
-    left: 0;
-}
-
-.aside .nav-toggler span::after {
-    content: '';
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    position: absolute;
-    top: 6px;
-    left: 0;
-}
-
 .aside .nav {
     margin-top: 50px;
     color: var(--text-black-500);
@@ -341,6 +303,10 @@ h3.my-profession {
 }
 
 /* About */
+
+.about{
+    
+}
 .about .about-content {
     flex: 0 0 100%;
     max-width: 100%;
@@ -619,6 +585,8 @@ h3.my-profession {
     color: var(--text-black-500);
 }
 
+/* contact */
+
 .contact-title {
     color: var(--skin-color);
     text-align: center;
@@ -705,56 +673,111 @@ h3.my-profession {
     padding: 0 50px;
 }
 
-@media (max-width: 1199px) {
+@media only screen and (max-width: 992px){
     .aside {
-        left: -270px;
+        display: none;
     }
-
-    .main-content {
+    .main-container {
         padding-left: 0;
     }
 
-    .about .about-content .personal-info .info-item p span {
-        display: block;
-        margin-left: 0;
-    }
-}
-@media (max-width: 991px) {
-    .contact .contact-info-item{
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .home .home-info {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .main-part {
+        padding-left: 0;
     }
 
     .home .home-img {
         display: none;
     }
-}
 
-@media (max-width: 767px) {
-    /* .contact .contact-info-item, */
-    .about .about-content, .experience,
-    .about .about-content .skills,
+    .home {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+    }
+
+    .home .home-info {
+        display: 0 0 100%;
+        max-width: 100%;
+    }
+
     .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-    .portfolio-side {
-        display: block;
+    .about .about-content .skills {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
+    .service-item .service-item-inner {
+        padding: 30px 20px;
+    }
+
+    .portfolio-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item-inner{
+        margin-top: 15px;
+    }
+
+    .contact {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .section {
+        min-height: 50vh;
+        padding-bottom: 0;
+    } 
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .hello {
+        font-size: 25px;
+    }
+
+    .hello span {
+        font-size: 27px;
+    }
+
+    .profession {
+        font-size: 27px;
+    }
+
+    .typing {
+        font-size: 25px;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px){
     .img-port {
         height: 200px;
-        margin-top: 30px;
+    }
+
+    .full-project {
+        font-size: 15px;
     }
 
     .contact .contact-info-item {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    
+}
+
+@media only screen and (max-width: 576px){
+    .img-port {
+        height: 150px;
     }
 }
